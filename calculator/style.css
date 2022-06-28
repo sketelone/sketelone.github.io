@@ -1,0 +1,114 @@
+body {
+    background-image:url("img/cows.jpg");
+    /* background-repeat:no-repeat; */
+    /* background-position:center; */
+    font-family: sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    padding: 100px;
+}
+
+.header{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+    padding:60px;
+    font-family: 'Monoton';
+    font-size:60px;
+    text-align: center;
+}
+
+.window{
+    display:flex;
+    /* flex-wrap:wrap; */
+    flex-direction:column;
+    /* align-items:center; */
+    /* justify-content: space-around; */
+    width: 400px;
+    height: 120px;
+    box-sizing: border-box;
+    background-color: gainsboro;
+    border-width: 1px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    border-radius:4px;
+    font-family: 'Cute Font';
+    padding: 0px 15px;
+}
+
+.history {
+    font-size: 40px;
+    text-align: right;
+}
+
+.display {
+    font-size: 60px;
+    text-align: right;
+    padding-bottom: 15px;
+    /* padding: 12px; */
+}
+
+.keypad {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+.footer{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+    align-items:bottom;
+    padding:120px;
+    font-family: 'sans-serif';
+    text-align: center;
+}
+
+.nums {
+    display:flex;
+    flex-wrap:wrap;
+    width: 300px;
+    align-items:center;
+    justify-content: center;
+}
+
+.opers {
+    display:flex;
+    width: 100px;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+
+.utils {
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content: center;
+}
+
+button {
+    /* font-family: 'Press Start 2P'; */
+    font-family: 'Cute Font';
+    font-size: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+.bigbtn {
+    /* font-family: 'Press Start 2P'; */
+    font-family: 'Cute Font';
+    font-size: 60px;
+    width: 200px;
+    height: 100px;
+}
+
+a {
+    padding:20px;
+}
