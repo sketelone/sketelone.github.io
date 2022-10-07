@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logobar">
+            <img src="img/logo.png">
+            <header>ODIN</header>
+        </div>
+        <div class="photo_credit">
+            <p>Photo by <a href="https://www.freeimages.com/photographer/zebulon666-32150">zebulon666</a> on <a href="https://www.freeimages.com/">freeimages.com</a></text>
+        </div>
+    </div>
+    <div class="signup">
+        <div class = "header">
+            <h5>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br> Sign up <em>now</em> to get started.</h5>
+            <h5>You <em>know</em> you want to.</h5>
+        </div>
+        <form id="signup_form" action="#" method="get" novalidate>
+            <legend>Let's do this!</legend>
+            <fieldset>
+                <div class="group">
+                    <label for="first_name">FIRST NAME</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Thor" 
+                    autocomplete="off" required>
+                    <span class="first_name_error" aria-live="polite"></span>
+                </div>
+                <div class="group">
+                    <label for="last_name">LAST NAME</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Odinson" 
+                    autocomplete="off" required>
+                    <span class="last_name_error" aria-live="polite"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="group">
+                    <label for="email">EMAIL</label>
+                    <input type="email" id = "email" name="email" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="email_error" aria-live="polite"></span>
+
+                </div>
+                <div class="group">
+                    <label for="phone_number">PHONE NUMBER</label>
+                    <input type="text" id="phone_number" name="phone_number" 
+                    pattern = "^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$" 
+                    title="Please enter a valid 9-digit phone number" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="phone_number_error" aria-live="polite"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="group">
+                    <label for="password">PASSWORD</label>
+                    <input type="password" id="password" name="password" minlength = "8" 
+                    title="Password must be at least 8 characters long" placeholder=" " 
+                    autocomplete="off" required>
+                    <span class="password_error" aria-live="polite"></span>
+                </div>
+                <div class="group">
+                    <label for="confirm_password">CONFIRM PASSWORD</label>
+                    <input type="password" id="confirm_password" name="confirm_password" 
+                    placeholder=" " autocomplete="off" required>
+                    <span class="confirm_password_error" aria-live="polite"></span>
+                </div> 
+            </fieldset>
+        </form>
+        <div class = "footer">
+            <button type="submit" id="submit" form="signup_form">Create Account</button>
+            <p>Already have an account? <a href>Log in</a></p>
+        </div>
+    </div>
+
+</body>
+</html>

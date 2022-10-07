@@ -1,0 +1,126 @@
+body {
+    background-color: #edf5ef;
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    flex-direction:row;
+}
+
+.sidebar {
+    background-image:url("img/squares.jpg");
+    width: clamp(500px, 33vw, 1000px);
+    min-width: 360px;
+    height: 100vh;
+}
+
+.logobar {
+    position: relative;
+    top:20vh;
+    height:120px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    background-color: black;
+    opacity: 0.8;
+    font-family: 'MuseoModerno';
+    font-size: 75px;
+    font-weight: bolder;
+    color: white;
+}
+
+.photo_credit {
+    position: relative;
+    top:650px;
+    color:white;
+    text-align: center;
+}
+
+.signup {
+    width: clamp(1000px, 66vw, 2000px);
+    font-size: 24px;
+    font-weight:bold;
+}
+
+.header, .footer {
+    padding:30px;
+}
+
+form {
+    padding:30px;
+    background-color:  #f7fff9;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+legend {
+    font-weight:bold;
+}
+
+fieldset {
+    display:flex;
+    border:0px;
+    padding-left: 0px;
+}
+
+.group {
+    padding-right:60px;
+}
+
+label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+}
+
+input {
+    outline: none;
+    display:block;
+    border: 1px solid gray;
+    border-radius: 3px;
+    height:20px;
+    width:225px;
+}
+
+img {
+    width: 80px;
+}
+
+a {
+    font-size:16px;
+    color:  #6f9e7b;
+}
+
+p {
+    font-size:16px;
+}
+
+button {
+    background-color: #6f9e7b;
+    height:40px;
+    padding:10px 40px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-weight:bold;
+}
+
+input:focus {
+    border: 3px solid rgb(0, 167, 144);
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    background: rgb(252, 217, 223);
+    border-color: red;
+}
+
+span {
+    display:block;
+    padding: 10px 0px;
+    width:225px;
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    color:red;
+    border: none;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+}
