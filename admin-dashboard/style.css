@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 260px minmax(800px, 3fr) 1fr;
+    background-color: rgb(241, 233, 241);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: grid;
+    grid-template: 50px auto / auto 300px;
+    grid-column: 2 / 4;
+    background-color:  rgb(255, 248, 255);
+    padding: 20px 40px;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.search {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    justify-items: start;
+    grid-template-columns: 20px 1fr;
+}
+
+.user-bar {
+    justify-self: end;
+    display: grid;
+    justify-items: center;
+    gap: 20px;
+}
+
+.greeting {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    font-size: 10px;
+    align-items: center;
+    line-height: 2.5em;
+}
+
+.main-user-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user-actions, .user-bar {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+}
+
+.user-actions {
+    justify-items: center;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-rows: 100px repeat(2, 200px);
+    grid-row: 1 / 4;
+    background-color: rgb(202, 170, 202);
+    padding: 20px;
+    align-items: center;
+    color:white;
+}
+
+.logo {
+    justify-self: start;
+    display: grid;
+    grid-template-columns: 40px 200px;
+    gap: 10px;
+    align-items: center;
+    font-size:32px;
+    font-weight:bolder;
+}
+
+.nav, .nav-2 {
+    align-self: center;
+
+}
+.nav ul, .nav-2 ul  {
+    display:grid;
+    list-style:none;
+    gap: 10px;
+    /* padding: 10px; */
+    font-weight: bold;
+}
+
+.nav li, .nav-2 li {
+    display: grid;
+    grid-template-columns: 40px 200px;
+    align-items: center;
+    
+}
+
+.projects {
+    display:grid;
+    padding: 20px;
+    grid-row: 2 / 4;
+}
+
+.card-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}    
+
+h4 {
+    margin:10px 0px;
+    font-size: 20px;
+}
+
+.card, .blurb-container, .trending-container {
+    background-color: rgb(255, 248, 255);
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+}
+
+.card {
+    display: grid;
+    grid-template-rows: auto;
+    border-left: solid 10px rgb(141, 12, 38);
+    color: darkslategray;
+}
+
+.icons {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: bold;
+    align-self: end;
+    margin: 0px;
+    color: black;
+}
+
+.announcements {
+    display:grid;
+    padding: 20px;
+    grid-row: 2 / 3;
+    align-self:start;
+}
+
+.blurb-container {
+    font-size:12px;
+    color: darkslategray;
+}
+
+hr {
+    margin: 15px 0px;
+}
+
+.blurb-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.trending {
+    display:grid;
+    padding: 20px;
+    grid-row: 3 / 4;
+    align-self:end;
+}
+
+.trending-container {
+    display: grid;
+    gap: 20px;
+}
+
+.other-user {
+    display: grid;
+    grid-template-columns: 40px 200px;
+    gap: 20px;
+    align-self: center;
+    align-items: center;
+    background-color: rgb(255, 248, 255);
+    font-size:12px;
+    color: darkslategray;
+    letter-spacing: 0.2em;
+}
+
+.user-name {
+    font-size: 14px;
+    color: black;
+    letter-spacing: 0em;
+}
+
+.large-user-icon {
+    height:70px;
+    border-radius: 50%;
+}
+
+.small-user-icon {
+    height:40px;
+    border-radius: 50%;
+    justify-self: center;
+}
+
+button {
+    background-color: rgb(202, 170, 202);
+    padding:10px 20px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight:bold;
+}
+
+input {
+    background-color: rgb(241, 233, 241);
+    border: none;
+    border-radius: 30px;
+    height: 25px;
+    width: 700px;
+}
