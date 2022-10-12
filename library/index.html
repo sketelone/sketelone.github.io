@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Library</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Mr+Bedfort&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        Welcome to the Library
+        <legend>Add a book, if you please...</legend>
+        <button id="open-form" onclick="openForm()">ADD A BOOK</button>
+    </div>
+    <div class = "form-popup" id="myForm">
+        <form id="book-form" action="" method="">
+            <button type="button" id="close-form" onclick="closeForm()">&times;</button>
+            <fieldset>
+                <label for="title">TITLE</label>
+                <input type="text" id="title" name="title" autocomplete="off" required>
+                <span class="title_error" aria-live="polite"></span>
+                <label for="author">AUTHOR</label>
+                <input type="text" id="author" name="author" autocomplete="off" required>
+                <span class="author_error" aria-live="polite"></span>
+                <label for="pages">NUMBER OF PAGES</label>
+                <input type="text" id="pages" name="pages" pattern = "\d+" autocomplete="off" required>
+                <span class="pages_error" aria-live="polite"></span>
+                <label for="read">HAVE YOU READ IT?</label>
+                <input type="checkbox" id="read" name="read">
+            </fieldset>
+            <button type="submit" id="submit">ADD</button>
+            
+        </form>
+    </div>
+    
+    <div class="card-container">
+    </div>
+    <div class="footer">
+        <p>Copyright &#169; 2022 sketelone</p>
+        <a href="https://github.com/sketelone">
+            <img src="img/GitHub-Mark-32px.png">
+        </a>
+    </div>
+</body>
+</html>
