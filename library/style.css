@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    background-color: rgb(241, 233, 241);
+    font-family:Arial, Helvetica, sans-serif;
+    justify-items: center;
+}
+
+.header, .footer {
+    padding:30px;
+    grid-column: 1 / 4;
+}
+
+.header {
+    font-family: 'Mr Bedfort', cursive;
+    font-size: 60px;
+    font-weight: bolder;
+}
+
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+    background-color:  #f7fff9;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    grid-column: 2 / 3;
+    width: 75%;
+}
+
+legend {
+    font-family: 'Mr Bedfort', cursive;
+    font-size: 24px;
+    font-weight:bold;
+    letter-spacing: 0.1em;
+    padding-bottom: 60px;
+}
+
+fieldset {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border:0px;
+    padding-left: 0px;
+}
+
+label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+}
+
+input {
+    outline: none;
+    display:block;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    height:20px;
+    width:225px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+    outline: none;
+    display:block;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.card-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    grid-column: 2 / 3;
+}  
+
+.card {
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    background-color: rgb(250, 247, 243);
+    background-image: linear-gradient(pink, pink), linear-gradient(palevioletred, palevioletred);
+    background-size: 100% 2px, 2px 100%;
+    background-position: 0 15%, 10% 0;
+    background-repeat: no-repeat;
+    padding: 40px 10px 10px 40px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+    min-width: 200px;
+    aspect-ratio: 2 / 1;
+    font-family: "Courier Prime", monospace;
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 250px auto;
+    justify-items: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+
+}
+
+button {
+    background-color: #6f9e7b; 
+    border: none;
+    border-radius: 6px;
+    color: white;
+    letter-spacing: 0.2em;
+}
+
+#submit {
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-self: center;
+    margin: 60px;
+    padding:10px 40px;
+    height:40px;
+    font-size: 16px;
+}
+
+.read-button, .remove-button {
+    background: rgb(250, 247, 243);
+    border: solid palevioletred 2px;
+    align-self: center;
+    justify-self: center;
+    height: 20px;
+    width: 80px;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    justify-self: start;
+    align-self: end;
+}
