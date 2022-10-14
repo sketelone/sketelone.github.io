@@ -20,14 +20,12 @@ var removeButtons = document.getElementsByClassName('remove-button');
 //when user submits form, add book to the library
 submit.addEventListener('click', function(event) {
     event.preventDefault();
-    var formValid = false;
+    var formValid = true;
     inputs.forEach(input => {
         console.log(input, input.validity)
         if (validate(input) == false) {
             console.log("nosubmit")
             formValid = false;
-        } else {
-            formValid = true;
         }
     }) 
     if (formValid == true) {
