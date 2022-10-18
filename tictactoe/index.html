@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        TIC TAC TOE
+        <button id="open-form" onclick="Form.open()">LET'S PLAY</button>
+        <button id="reset" onclick="game.reset(); Form.open()">PLAY AGAIN?</button>
+        <div class="game-alert"></div>
+    </div>
+    <div class="form-popup" id="player-form">
+        <form id="game-form" action="" method="" novalidate>
+            <button type="button" id="close-form" onclick="Form.close()">&times;</button>
+            <fieldset class="player-one">
+                <legend>PLAYER ONE</legend>
+                <label for="name1">NAME</label>
+                <input type="text" id="name1" name="name1" autocomplete="off" required>
+                <span class="name1_error" aria-live="polite"></span>
+                <label>PICK YOUR POISON</label>
+                <div class="group">
+                    <input type="radio" class="player-one-radio" id="X" name="piece1" value="X" checked="true">
+                    <label for="X">EXES</label>
+                </div>
+                <div class="group">
+                    <input type="radio" class="player-one-radio" id="O" name="piece1" value="O">
+                    <label for="O">OHS</label>    
+                </div>
+            </fieldset>
+            <fieldset class="player-two">
+                <legend>PLAYER TWO</legend>
+                <label for="name2">NAME</label>
+                <input type="text" id="name2" name="name2" autocomplete="off" required>
+                <span class="name2_error" aria-live="polite"></span>
+                <label>PICK YOUR POISON</label>
+                <div class="group">
+                    <input type="radio" class="player-two-radio" id="X" name="piece2" value="X">
+                    <label for="X">EXES</label>
+                </div>
+                <div class="group">
+                    <input type="radio" class="player-two-radio" id="O" name="piece2" value="O" checked="true">
+                    <label for="O">OHS</label>    
+                </div>
+            </fieldset>
+            <fieldset class="computer">
+                <label>PLAY AGAINST COMPUTER</label>
+                <input type="checkbox" id="computer" name="computer">
+            </fieldset>
+            <button type="submit" id="submit">OK</button>
+        </form>
+    </div>
+    <div class="board">
+        <div class="tile" id = "00"></div>
+        <div class="tile" id = "01"></div>
+        <div class="tile" id = "02"></div>
+        <div class="tile" id = "10"></div>
+        <div class="tile" id = "11"></div>
+        <div class="tile" id = "12"></div>
+        <div class="tile" id = "20"></div>
+        <div class="tile" id = "21"></div>
+        <div class="tile" id = "22"></div>
+    </div>
+    <div class="footer">
+        <p>Copyright &#169; 2022 sketelone</p>
+        <a href="https://github.com/sketelone">
+            <img src="img/GitHub-Mark-32px.png">
+        </a>
+    </div>
+</body>
+</html>
