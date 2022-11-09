@@ -15,34 +15,38 @@ export default function pullLibrary() {
     if (storageAvailable('localStorage')) {
         //if something is stored, parse stored info
         if (!(localStorage.length === 0)) {
-            var projects = Object.keys(localStorage);
+            var keys = Object.keys(localStorage);
+            keys.sort();
             for (var i = 0; i<localStorage.length; i++) {
-                var newProject = addProject(projects[i], STORED_LIBRARY);
-                var list = localStorage.getItem(projects[i]);
+                var list = localStorage.getItem(keys[i]).split(";,");
+                for (var j=0; j<list.length; j++) {
+                    list[j] = list[j].replace(";", "");
+                }
+                if (list.length > 1) {
+                    var project = list.shift();
+                } else {
+                    project = list;
+                    list = [];
+                }
+                var newProject = addProject(project, STORED_LIBRARY);
                 if (list) {
-                    var todos = list.split(";");
-                    todos.forEach(todo => {
+                    list.forEach(todo => {
                         var temp = todo.split(",");
                         var newTodo = addTodo(temp[0], temp[1], temp[2], newProject);
                         if (temp[4] == "true") {
-                            newTodo.status = true;
-                        } else {
-                            newTodo.status = false;
-                        }
-                        if (temp[5] == "true") {
                             newTodo.priority = true;
                         } else {
                             newTodo.priority = false;
                         }
+                        if (temp[5] == "true") {
+                            newTodo.status = true;
+                        } else {
+                            newTodo.status = false;
+                        }
                     })   
                 }
             }
-            //if stored library matches project library, clear stored, otherwise update
-            if (STORED_LIBRARY == PROJECT_LIBRARY) {
-                localStorage.clear();
-            } else {
-                PROJECT_LIBRARY = STORED_LIBRARY;
-            }
+            PROJECT_LIBRARY = STORED_LIBRARY;
         }
     }
 }
