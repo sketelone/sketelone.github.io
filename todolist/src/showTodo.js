@@ -220,12 +220,37 @@ export default function showTodo(todo, i) {
             expand.innerHTML = "expand_more";
 
             //allow user to change notes on click
-            itemNotes.addEventListener('click', (e) => {
-                item.removeChild(item.lastChild)
+            if (todo.notes) {
+                itemNotes.addEventListener('click', (e) => {
+                    item.removeChild(item.lastChild)
+                    //create and add input
+                    var input = document.createElement('input');
+                    input.classList.add("item-notes");
+                    input.placeholder = todo.notes;
+                    input.type = "text";
+                    item.appendChild(input);
+                    //create and add submit
+                    var submit = document.createElement('button');
+                    submit.innerHTML = "&#10003;";
+                    submit.type = "submit";
+                    item.appendChild(submit);
+                    //when user submits, update notes
+                    submit.addEventListener('click', (e) => {
+                        item.removeChild(item.lastChild);
+                        item.removeChild(item.lastChild);
+                        if (input.value) {
+                            todo.notes = input.value;
+                            pushLibrary();
+                        }
+                        itemNotes.innerHTML = todo.notes;
+                        item.appendChild(itemNotes);
+                    })
+                })
+            } else {
                 //create and add input
                 var input = document.createElement('input');
                 input.classList.add("item-notes");
-                input.placeholder = todo.notes;
+                input.placeholder = "Add notes here...";
                 input.type = "text";
                 item.appendChild(input);
                 //create and add submit
@@ -244,7 +269,9 @@ export default function showTodo(todo, i) {
                     itemNotes.innerHTML = todo.notes;
                     item.appendChild(itemNotes);
                 })
-            })
+
+            }
+
         } else {
             item.removeChild(item.lastChild);
             expand.innerHTML = "chevron_left";
